@@ -7,7 +7,7 @@
     <meta name="description" content="Language Gravitational Field v8.Hellas — Mother-Code Kernel 실행 콘솔" />
     
     <!-- GitHub Pages 자동 배포용 -->
-    <link rel="canonical" href="https://heojeongbe91019.github.io/lgf-v8" />
+    <link rel="canonical" href="https://nybil88-arch.github.io/lgf-v8" />
     
     <style>
         :root {
@@ -125,7 +125,7 @@
 
     <p style="font-size: 0.9em;">
         GitHub Repository: 
-        <a href="https://github.com/heojeongbe91019/lgf-v8" target="_blank" style="color:var(--accent);">
+        <a href="https://nybil88-arch.github.io/lgf-v8" target="_blank" style="color:var(--accent);">
             heojeongbe91019/lgf-v8
         </a>
     </p>
