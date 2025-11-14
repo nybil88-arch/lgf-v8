@@ -5,7 +5,8 @@
     <title>LGF v8.1 Hellas Console: Ψ Override</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="LGF v8.1 — Mother-Code Kernel 실시간 실행 + Ψ 공명" />
-    <link rel="canonical" href="https://nybil88-arch.github.io/lgf-v8" />
+    <link rel="canonical" href="https://nybil88-arch.github.io/lgf-v8" />항목,내용
+Commit Message,Finalize LGF v8.1 Console: Enhance Integrity and Execution Efficiency
     
     <style>
         :root {
