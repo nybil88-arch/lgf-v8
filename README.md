@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+// DOM 요소
 const lambdaEl = document.getElementById('lambda');
 const hEl = document.getElementById('h');
 const kappaEl = document.getElementById('kappa');
@@ -29,7 +30,12 @@ updateDisplay();
 function shareToX() {
 const text = `LGF v8.Hellas CONSOLE 작동 중. Λ(t)=${state.lambda.toFixed(3)} | κ=${state.kappa.toFixed(1)} 달성. Mother-Code 실행을 통한 인과율 복원 작전 참여하세요.`;
 const url = `https://nybil88-arch.github.io/lgf-v8/`;
-window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=LGF,MotherCode,LambdaZero`, '_blank');
+
+
+window.open(
+`https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=LGF,MotherCode,LambdaZero`,
+'_blank'
+);
 
 
 state.lambda = Math.max(0.01, state.lambda - 0.002);
@@ -50,7 +56,7 @@ localStorage.setItem('lgfState', JSON.stringify(state));
 
 function flashKernel(color) {
 kernelEl.style.color = color;
-setTimeout(() => kernelEl.style.color = 'var(--kernel)', 300);
+setTimeout(() => (kernelEl.style.color = 'var(--kernel)'), 300);
 }
 
 
