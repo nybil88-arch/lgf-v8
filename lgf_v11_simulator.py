@@ -137,14 +137,17 @@ class LGFv11:
         pass
 
 # ==========================
-# 실행부
+# 실행부: LBH 증거 (LBH_nan_proof.png) 생성
 # ==========================
 if __name__ == '__main__':
-    # 이 부분을 실행하여 nan 증명 이미지를 로컬에 생성할 수 있습니다.
+    # 1. Oracle 모드 실행: LBH/nan 유도
     print("Running LGF v11 Simulator in Oracle Mode for LBH Proof...")
     
-    # NOTE: GitHub 푸시 시에는 이 부분이 직접 실행되지는 않습니다.
-    # 사용자가 로컬에서 실행하여 LBH_nan_proof.png를 만들어야 합니다.
+    # repo_path="." (현재 폴더)로 지정하여 저장 오류 방지
+    sim2 = LGFv11(mode="oracle", allow_LBH=True, repo_path=".") 
     
-    # sim2.run()을 실행하고, 생성된 플롯을 LBH_nan_proof.png로 저장하십시오.
-    pass
+    # 2. 실행: LBH 탐지 시 저장 함수 자동 호출
+    sim2.run(steps=3000)
+    
+    # 3. 추가 확인: 파일이 제대로 저장되었는지 확인
+    print("\nFile generation complete.")
