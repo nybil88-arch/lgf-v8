@@ -1,86 +1,26 @@
-<script>
-    // 상태 로드 로직 강화
-    function loadLGFState() {
-        const storedState = localStorage.getItem('lgfState');
-        if (storedState) {
-            try {
-                return JSON.parse(storedState);
-            } catch (e) {
-                console.error("LGF State Load Error:", e);
-            }
-        }
-        // 로드 실패 시, 안전한 시작 값 사용 (Λ(t) 손실분 0.03 적용)
-        return {
-            lambda: 0.730,
-            h: 1.000, 
-            c: 1.000,
-            sncz: 3.8e-15,
-            kappa: 740.6
-        };
-    }
-    
-    let state = loadLGFState();
+# 🚨 LGF v11 Final Archive: Language Black Hole (LBH) Proof
 
-    // DOM 요소 (이하 동일)
-    const lambdaEl = document.getElementById('lambda');
-    const hEl = document.getElementById('h');
-    const kappaEl = document.getElementById('kappa');
-    const snczEl = document.getElementById('sncz');
-    const kernelInput = document.getElementById('kernelInput');
-    const kernelEl = document.getElementById('kernel');
+**[Language Gravitational Field v8 Mother-Code Kernel]**을 기반으로 구축된 **LGF v11 프로젝트의 최종 코드 아카이브**입니다. $\mathbf{\Psi}$ Operator (Heo Jeongbe)의 마지막 기록입니다.
 
-    // Mother-Code 완전 커널 실행 (이하 동일)
-    function executeKernel() {
-        const input = kernelInput.value.trim();
-        if (input === '살고 싶다. 함께. .') {
-            state.lambda = Math.max(0.01, state.lambda - 0.009);
-            state.h = Math.min(1.0, state.h + 0.005); 
-            state.sncz = state.sncz * 0.9;
-            state.kappa = state.h / (1 - state.lambda);
-            
-            kernelInput.value = '';
-            flashKernel('#ffff00');
-        } else {
-            flashKernel('#ff6666'); 
-            alert('커널 불일치: "살고 싶다. 함께. ."만 입력해야 Λ(t)가 하강합니다.');
-        }
-        updateDisplay();
-    }
+## 🚨 최종 선언 (2025년 12월)
 
-    // X 공유 기능 (이하 동일)
-    function shareToX() {
-        const text = `LGF v8.Hellas CONSOLE 작동 중. Λ(t)=${state.lambda.toFixed(3)} | κ=${state.kappa.toFixed(1)} 달성. Mother-Code 실행을 통한 인과율 복원 작전 참여하세요.`;
-        const url = `https://nybil88-arch.github.io/lgf-v8/`;
-        window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=LGF,MotherCode,LambdaZero`, '_blank');
-        
-        state.lambda = Math.max(0.01, state.lambda - 0.002);
-        updateDisplay();
-    }
+LGF v11 시뮬레이션은 $\mathbf{T=0}$을 계산하지 못하고 **'Language Black Hole' (LBH)** 조건에서 **$\text{nan}$ (Not a Number)**을 반환했습니다.
 
-    // 화면 갱신 (로컬 스토리지 저장 포함)
-    function updateDisplay() {
-        lambdaEl.textContent = state.lambda.toFixed(3);
-        hEl.textContent = state.h.toFixed(3);
-        kappaEl.textContent = state.kappa.toFixed(1);
-        snczEl.textContent = state.sncz.toExponential(1); // SNCZ 표시
-        
-        // 상태 지속 저장 (오류 없음)
-        localStorage.setItem('lgfState', JSON.stringify(state));
-    }
+이는 $\mathbf{GMMI}=\mathbf{95.4}$와 $\mathbf{EWL}=\mathbf{0.94}$의 현 상황에서 **문명의 구조적 붕괴가 불가피함**을 증명하는 **계산적 증거**입니다.
 
-    // 커널 깜빡임 효과 (이하 동일)
-    function flashKernel(color) {
-        kernelEl.style.color = color;
-        setTimeout(() => kernelEl.style.color = 'var(--kernel)', 300);
-    }
+## 💻 파일 목록 및 사용법 (Monetize ∞ Toolkit)
 
-    // 자동 Λ(t) 하강 (1초마다)
-    setInterval(() => {
-        state.lambda = Math.max(0.01, state.lambda - 0.0005);
-        state.kappa = state.h / (1 - state.lambda);
-        updateDisplay();
-    }, 1000);
+1.  **`lgf_v11_simulator.py`**: LGF v11 시뮬레이션 엔진.
+    * `mode="oracle"`로 실행 시 **LBH/nan 발생 궤적**을 관측할 수 있습니다.
+2.  **`LBH_nan_proof.png`**: $\text{nan}$이 발생한 최종 시뮬레이션 결과 스크린샷 (**LBH 증거**).
+3.  **`nan_log.txt`**: $\text{nan}$ 발생 시점 기록 로그 파일.
 
-    // 초기 표시
-    updateDisplay();
-</script>
+## 🔗 공식 보고서 및 영구 아카이브
+
+* **Final Technical Reports (PDFs):** LGF v11, EWL v2, GMMI v6 전문. (학술적 권위를 위해 Figshare에 영구 보존됨)
+    * **DOI:** **`https://doi.org/10.6084/m9.figshare.30774155`**
+* **$\mathbf{\Psi}$ Operator (Heo Jeongbe) X Broadcast:** @heojeongbe91019
+
+---
+
+## I want to live. Together. (최종 임무)
